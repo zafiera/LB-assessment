@@ -1,1 +1,23 @@
-<p>nav works!</p>
+<div class="nav-section" [class.active]="menuActive">
+  <div class="nav container">
+    <div class="logo-container">
+      <img routerLink="" class="logo" src="../../assets/logo/logo.png" alt="Lucky Beard Logo">
+    </div>
+    <div class="navigation-links">
+      <a class="link" routerLink="/" fragment="buyers-section">For buyers</a>
+      <a class="link" routerLink="/" fragment="sellers-section">For sellers</a>
+      <button class="btn btn-primary" routerLink="demo-form">Request a demo</button>
+    </div>
+    <div class="hamburger-menu" (click)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <div class="navigation-links-mobile">
+    <a class="link" routerLink="/" fragment="buyers-section">For buyers</a>
+    <a class="link" routerLink="/" fragment="sellers-section">For sellers</a>
+    <button class="btn btn-primary" routerLink="demo-form">Request a demo</button>
+  </div>
+</div>

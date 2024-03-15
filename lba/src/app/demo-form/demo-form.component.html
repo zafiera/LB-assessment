@@ -1,1 +1,57 @@
-<p>demo-form works!</p>
+<div class="demo-form-container">
+  <div class="header">
+    <h1 class="heading">Request a demo</h1>
+    <p class="description">
+      If you are a professional, we offer a desktop admin
+      platform, to allow a better and faster management of your
+      whole business
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="form-heading">Please fill in application</div>
+    <form class="demo-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput formControlName="name" placeholder="Your name">
+        <mat-error *ngIf="registrationForm.get('name')?.invalid && (registrationForm.get('name')?.dirty || registrationForm.get('name')?.touched)">
+          Please enter a valid response.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="email" placeholder="Your email">
+        <mat-error *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+          Please enter a valid response.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="mobile" placeholder="Mobile number">
+        <mat-error *ngIf="registrationForm.get('mobile')?.invalid && (registrationForm.get('mobile')?.dirty || registrationForm.get('mobile')?.touched)">
+          Please enter a valid response.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="company" placeholder="Company">
+        <mat-error *ngIf="registrationForm.get('company')?.invalid && (registrationForm.get('company')?.dirty || registrationForm.get('company')?.touched)">
+          Please enter a valid response.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Role in the Company</mat-label>
+        <mat-select formControlName="role">
+          <mat-option value="Developer">Developer</mat-option>
+          <mat-option value="QA Analyst">QA Analyst</mat-option>
+          <mat-option value="Business Analyst">Business Analyst</mat-option>
+        </mat-select>
+        <mat-error *ngIf="registrationForm.get('role')?.invalid && (registrationForm.get('role')?.dirty || registrationForm.get('role')?.touched)">
+          Please enter a valid response.
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button class="btn btn-primary" type="submit" [disabled]="registrationForm.invalid">Request</button>
+    </form>
+  </div>
+</div>

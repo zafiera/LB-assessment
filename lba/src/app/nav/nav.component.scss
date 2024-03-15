@@ -1,0 +1,125 @@
+.nav-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 131px;
+  margin-top: 24px;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.navigation-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 63px;
+}
+
+.link {
+  color: var(--white);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  text-decoration: none;
+}
+
+.btn.btn-primary {
+  color: var(--white);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 16px */
+  display: flex;
+  padding: 15px 20px;
+  align-items: flex-start;
+  border-radius: 10px;
+  background:  var(--blue);
+  border: none;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 4px 0;
+  transition: transform 0.3s ease;
+}
+
+.navigation-links-mobile {
+  display: none;
+}
+
+.active.nav-section {
+  .hamburger-menu .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 10.5px);
+  }
+
+  .hamburger-menu .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -10.5px);
+  }
+
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 20px !important;
+  }
+
+  .navigation-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .active {
+    background-color: var(--black) !important;
+
+      .navigation-links-mobile {
+        display: flex;
+      }
+
+    .navigation-links-mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      margin: 40px;
+      border-top: 1px solid var(--white);
+      padding-top: 40px;
+    }
+  }
+
+  .btn.btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
