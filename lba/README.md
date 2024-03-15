@@ -1,4 +1,4 @@
-# Lba
+# Lucky Beard Assessment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+---
+
+## Reasoning behind CSS Framework Selection
+
+Bootstrap provides a solid foundation with a wide range of components and utilities, making it easy to rapidly build responsive and consistent user interfaces. 
+
+## Issues Experienced and Solutions Implemented
+
+No significant issues were encountered during the assessment. However, minor challenges such as layout adjustments and styling tweaks were quickly addressed by using my own judgment.
+
+## Areas for Improvement with Additional Time
+
+Given more time, several aspects of the assessment could be refined and enhanced:
+- Implementation of assessment in React
+- Investing time in restructuring and optimizing files for cleaner and more maintainable code
+
