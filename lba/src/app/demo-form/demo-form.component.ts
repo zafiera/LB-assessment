@@ -23,10 +23,8 @@ export class DemoFormComponent {
 
   onSubmit() {
     if (this.registrationForm.valid) {
-      // Perform form submission logic here
       console.log('Form submitted successfully!', this.registrationForm.value);
     } else {
-      // Handle invalid form submission
       console.error('Invalid form submission. Please check the form.');
     }
   }
